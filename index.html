@@ -2,23 +2,38 @@
 <html>
   <head>
     <title>RPS game</title>
+    <link rel="stylesheet" href="./app.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="titleContainer">
-        <h1>Rock, paper, scissors - let's go!</h1>
+        <h1 class="title">Rock, paper, scissors - let's go!</h1>
       </div>
-      <div class="resultContainer">
-        <div>Computer: <span id="computersChoice"></span></div>
-        <div>User: <span id="userChoice"></span></div>
-        <div>Result:<span id="result"></span></div>
+      <div class="resultWrapper">
+        <div class="resultContainer">
+          <div class="resultRow">
+            Computer: <span id="computersChoice"></span>
+          </div>
+          <div class="resultRow">User: <span id="userChoice"></span></div>
+          <div class="resultRow">Result: <span id="result"></span></div>
+        </div>
+        <div class="emojiContainer">
+          <img
+            class="emojiImage"
+            id="emoji"
+            src="https://cdn.icon-icons.com/icons2/3044/PNG/512/smile_pixel_art_emoticon_emoji_icon_189295.png"
+            alt=""
+          />
+        </div>
       </div>
-      <div class="buttonContainer">
-        <button class="rock" id="rock">rock</button>
-        <button class="paper" id="paper">paper</button>
-        <button class="scissors" id="scissors">scissors</button>
-        <div class="resetButtonContainer">
-          <button class="resetButton" id="reset">Reset</button>
+      <div class="buttonWrapper">
+        <div class="buttonContainer">
+          <button class="rock" id="rock">rock</button>
+          <button class="paper" id="paper">paper</button>
+          <button class="scissors" id="scissors">scissors</button>
+          <div class="resetButtonContainer">
+            <button class="resetButton" id="reset">Reset</button>
+          </div>
         </div>
       </div>
     </div>
