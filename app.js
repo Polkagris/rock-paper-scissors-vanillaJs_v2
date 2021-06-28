@@ -2,6 +2,20 @@ const options = ["rock", "paper", "scissors"];
 const resultArray = ["draw", "win", "lose"];
 let result = "";
 
+// emoji
+const setEmojiStatus = () => {
+  if (result == "win") {
+    document.getElementById("emoji").src =
+      "https://cdn.icon-icons.com/icons2/3044/PNG/512/smile_pixel_art_emoticon_emoji_icon_189295.png";
+  } else if (result == "draw") {
+    document.getElementById("emoji").src =
+      "https://cdn.icon-icons.com/icons2/3044/PNG/512/bored_pixel_emoticon_emoji_icon_189283.png";
+  } else if (result == "lose") {
+    document.getElementById("emoji").src =
+      "https://cdn.icon-icons.com/icons2/3044/PNG/512/scared_pixel_emoticon_emoji_icon_189285.png";
+  }
+};
+
 const getComputerChoice = () => {
   const computerRandomNumber = Math.floor(Math.random() * 3);
   const computerChosenOption = options[computerRandomNumber];
@@ -52,6 +66,7 @@ const rockOption = document
     console.log("Rock was clicked!");
     document.getElementById("userChoice").innerHTML = "rock";
     gameLogic("rock");
+    setEmojiStatus();
   });
 
 const paperOption = document
@@ -60,6 +75,7 @@ const paperOption = document
     console.log("Paper was clicked!");
     document.getElementById("userChoice").innerHTML = "paper";
     gameLogic("paper");
+    setEmojiStatus();
   });
 
 const scissorsOption = document
@@ -68,6 +84,7 @@ const scissorsOption = document
     console.log("Scissors was clicked!");
     document.getElementById("userChoice").innerHTML = "scissors";
     gameLogic("scissors");
+    setEmojiStatus();
   });
 
 const reset = document
@@ -77,4 +94,7 @@ const reset = document
     document.getElementById("computersChoice").innerHTML = "";
     document.getElementById("userChoice").innerHTML = "";
     document.getElementById("result").innerHTML = "";
+    // emoji status
+    document.getElementById("emoji").src =
+      "https://cdn.icon-icons.com/icons2/3044/PNG/512/smile_pixel_art_emoticon_emoji_icon_189295.png";
   });
